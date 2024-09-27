@@ -17,4 +17,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>io.github.burukeyou</groupId>
+            <artifactId>jdframe</artifactId>
+            <version>0.1.7</version>
+        </dependency>
+    </dependencies>
 </project>

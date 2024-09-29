@@ -1,8 +1,10 @@
 package com.study_demo.jdfame;
 
+import com.alibaba.fastjson.JSON;
 import com.study_demo.jdfame.baseinfo.StaticInfo;
 import com.study_demo.jdfame.baseinfo.Student;
 import io.github.burukeyou.dataframe.iframe.JDFrame;
+import io.github.burukeyou.dataframe.iframe.item.FI2;
 import org.junit.Test;
 
 import java.util.List;
@@ -25,6 +27,9 @@ public class JdFameTest {
         read.forEachDo(System.out::println);
         read.forEachPreDo((prev, curr)->{
         });
+
+        List<FI2<Integer, List<Student>>> fi2s = read.whereNotNull(Student::getAge).group(Student::getAge).toLists();
+        System.out.println(JSON.toJSONString(fi2s));
 
     }
 }

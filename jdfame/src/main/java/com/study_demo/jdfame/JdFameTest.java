@@ -3,10 +3,8 @@ package com.study_demo.jdfame;
 import com.study_demo.jdfame.baseinfo.StaticInfo;
 import com.study_demo.jdfame.baseinfo.Student;
 import io.github.burukeyou.dataframe.iframe.JDFrame;
-import io.github.burukeyou.dataframe.iframe.window.Sorter;
 import org.junit.Test;
 
-import java.util.Comparator;
 import java.util.List;
 
 /**

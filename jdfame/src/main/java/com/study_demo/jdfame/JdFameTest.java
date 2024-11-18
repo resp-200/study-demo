@@ -7,6 +7,7 @@ import io.github.burukeyou.dataframe.iframe.JDFrame;
 import io.github.burukeyou.dataframe.iframe.item.FI2;
 import org.junit.Test;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -17,7 +18,7 @@ import java.util.List;
 public class JdFameTest {
 
     @Test
-    public void basicTest(){
+    public void basicTest() {
         JDFrame<Student> read = JDFrame.read(StaticInfo.list);
         read.show();
         List<Student> students = read.toLists();
@@ -25,11 +26,13 @@ public class JdFameTest {
 //        System.out.println(read.columns());
 //        read.addRankCol(Sorter.toSorter(Comparator.comparingInt(Student::getAge))).show();
         read.forEachDo(System.out::println);
-        read.forEachPreDo((prev, curr)->{
+        read.forEachPreDo((prev, curr) -> {
         });
 
         List<FI2<Integer, List<Student>>> fi2s = read.whereNotNull(Student::getAge).group(Student::getAge).toLists();
         System.out.println(JSON.toJSONString(fi2s));
 
+
+        read.cutFirst(10);
     }
 }

@@ -11,14 +11,17 @@ public class Main {
         List<Double> list = new ArrayList<>();
         list.add(1.0);
         list.add(2.0);
-        consumer1(list);
-        consumer(list);
+
+        List<Number> numbers = new ArrayList<>();
+        List<Object> objects = new ArrayList<>();
+        addNumber(list, objects);
+        addNumber2(list, objects);
     }
-    public static void consumer1(List<Number> list){
-        list.forEach(System.out::println);
+    public static void addNumber(List<? extends Number> list, List<Number> numbers){
+        numbers.addAll(list);
     }
-    public static void consumer(List<? extends Number> list){
-        list.forEach(System.out::println);
+    public static void addNumber2(List<? extends Number> list, List<? super Number> numbers){
+        numbers.addAll(list);
     }
 
 }

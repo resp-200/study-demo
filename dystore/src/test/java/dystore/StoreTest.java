@@ -4,6 +4,9 @@ import com.doudian.open.api.shop_batchCreateStore.ShopBatchCreateStoreRequest;
 import com.doudian.open.api.shop_batchCreateStore.ShopBatchCreateStoreResponse;
 import com.doudian.open.api.shop_batchCreateStore.param.ShopBatchCreateStoreParam;
 import com.doudian.open.api.shop_batchCreateStore.param.StoreListItem;
+import com.doudian.open.api.shop_delStore.ShopDelStoreRequest;
+import com.doudian.open.api.shop_delStore.ShopDelStoreResponse;
+import com.doudian.open.api.shop_delStore.param.ShopDelStoreParam;
 import com.doudian.open.api.shop_editStore.ShopEditStoreRequest;
 import com.doudian.open.api.shop_editStore.ShopEditStoreResponse;
 import com.doudian.open.api.shop_editStore.param.OpenTime;
@@ -238,6 +241,17 @@ public class StoreTest {
         openTime.setDayMap(map);
         param.setOpenTime(openTime);
         ShopEditStoreResponse response = request.execute(accessToken);
+        /* 202053460L
+{"data":{},"log_id":"202412231646298440319E1E4FDB35001A","code":"10000","msg":"success","sub_code":"","sub_msg":""}
+        * */
+    }
+
+    @Test
+    public void delStore() {
+        ShopDelStoreRequest request = new ShopDelStoreRequest();
+        ShopDelStoreParam param = request.getParam();
+        param.setStoreId(203740622L);
+        ShopDelStoreResponse response = request.execute(accessToken);
         /* 202053460L
 {"data":{},"log_id":"202412231646298440319E1E4FDB35001A","code":"10000","msg":"success","sub_code":"","sub_msg":""}
         * */

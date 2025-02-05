@@ -8,6 +8,8 @@ public class TokenConfig {
 
     static {
         //设置appKey和appSecret，全局设置一次
+        GlobalConfig.initAppKey("");
+        GlobalConfig.initAppSecret("");
     }
 
     public static AccessToken getAccessToken(Long shopId) {

@@ -99,18 +99,18 @@ public class TestDate {
 
     @Test
     public void dateTest3(){
-        LocalDateTime now = LocalDateTime.of(2009,12,31, 10, 0, 0);
+        LocalDateTime now = LocalDateTime.of(2024,12,23, 9,30,0);
         int weekBasedYear = now.get(WeekFields.ISO.weekBasedYear());
         System.out.println("weekBasedYear=" + weekBasedYear);
         int weekOfWeekBasedYear = now.get(WeekFields.ISO.weekOfWeekBasedYear());
         System.out.println("weekOfWeekBasedYear=" + weekOfWeekBasedYear);
 
-        LocalDate localDate = LocalDate.of(2024,1,1);
-        int weekBasedYear2 = localDate.get(WeekFields.ISO.weekBasedYear());
-        System.out.println("weekBasedYear2=" + weekBasedYear2);
-        int weekOfWeekBasedYear2 = localDate.get(WeekFields.ISO.weekOfWeekBasedYear());
-        System.out.println("weekOfWeekBasedYear2=" + weekOfWeekBasedYear2);
-        System.out.println("dayOfWeek=" + localDate.getDayOfWeek().getValue());
+//        LocalDate localDate = LocalDate.of(2024,1,1);
+//        int weekBasedYear2 = localDate.get(WeekFields.ISO.weekBasedYear());
+//        System.out.println("weekBasedYear2=" + weekBasedYear2);
+//        int weekOfWeekBasedYear2 = localDate.get(WeekFields.ISO.weekOfWeekBasedYear());
+//        System.out.println("weekOfWeekBasedYear2=" + weekOfWeekBasedYear2);
+//        System.out.println("dayOfWeek=" + localDate.getDayOfWeek().getValue());
     }
 
     @Test

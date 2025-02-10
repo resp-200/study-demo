@@ -117,6 +117,10 @@ public class TestDate {
     public void test4(){
         String startDayByBasedYearWeekNumber = getStartDayByBasedYearWeekNumber2(2024, 52);
         System.out.println(startDayByBasedYearWeekNumber);
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("MM/dd");
+        LocalDate now = LocalDate.of(2025,2,17);
+        String format = now.with(DayOfWeek.TUESDAY).format(fmt);
+        System.out.println(format);
     }
 
     public static String getStartDayByBasedYearWeekNumber(int year, int weekNo) {
@@ -152,4 +156,7 @@ public class TestDate {
         LocalDate mondayOfWeek = firstMonday.plusWeeks(week - 1);
         return mondayOfWeek.toString();
     }
+
+
+
 }

@@ -12,6 +12,7 @@
         <module>jdfame</module>
         <module>base</module>
         <module>dystore</module>
+        <module>mini-spring</module>
     </modules>
 
     <properties>

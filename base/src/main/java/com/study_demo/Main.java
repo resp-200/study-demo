@@ -1,6 +1,7 @@
 package com.study_demo;
 
 import com.study_demo.genericParadigm.*;
+import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;

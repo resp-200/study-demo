@@ -25,6 +25,8 @@ public class Tester {
 //        ZStream.of(list).foreach(System.out::println);
 //        List<String> newList = ZStream.of(list).toList();
 //        System.out.println(newList);
-        ZStream.of(list).whereNotNull(Function.identity()).foreach(System.out::println);
+        ZStream.of(list).whereNotNull(Function.identity())
+                .whereEq(item -> item, "a")
+                .foreach(System.out::println);
     }
 }

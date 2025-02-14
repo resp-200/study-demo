@@ -53,4 +53,15 @@ public class ZStream<T> {
             return true;
         });
     }
+
+    public <R> ZStream<T> whereEq(Function<T, R> function, R r) {
+        return new ZStream<>(filterEq(function, r));
+    }
+
+    private <R> Stream<T> filterEq(Function<T, R> function, R r) {
+        return stream.filter(item ->{
+            R apply = function.apply(item);
+            return r == apply;
+        });
+    }
 }

@@ -13,6 +13,7 @@
         <module>base</module>
         <module>dystore</module>
         <module>mini-spring</module>
+        <module>mcp-server-demo</module>
     </modules>
 
     <properties>

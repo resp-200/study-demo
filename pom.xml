@@ -14,6 +14,7 @@
         <module>dystore</module>
         <module>mini-spring</module>
         <module>mcp-server-demo</module>
+        <module>langchain-study</module>
     </modules>
 
     <properties>
